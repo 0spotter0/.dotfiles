@@ -1,0 +1,19 @@
+**/.claude/settings.local.json
+
+# Mac
+.DS_Store
+
+# VSCode
+.vscode
+
+# vi
+*~
+
+# node
+node_modules
+
+# python
+.venv
+
+# env files
+.env*

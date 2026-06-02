@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="brew,ghostty,git,karabiner,linearmouse,nvim,raycast,tmux,zsh"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+# Run stow
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+
+# Install brew packages
+brew bundle check --global || brew bundle install --global

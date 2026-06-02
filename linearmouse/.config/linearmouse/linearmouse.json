@@ -1,0 +1,51 @@
+{
+  "schemes" : [
+    {
+      "scrolling" : {
+        "distance" : {
+          "vertical" : "auto"
+        }
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x0",
+          "category" : "trackpad",
+          "productID" : "0x0"
+        }
+      },
+      "pointer" : {
+        "disableAcceleration" : false
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse",
+          "vendorID" : "0x258a",
+          "productName" : "Wired Gaming Mouse",
+          "productID" : "0x36"
+        }
+      },
+      "pointer" : {
+        "acceleration" : 1,
+        "speed" : 0.0263,
+        "disableAcceleration" : true
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "productID" : "0x1830",
+          "productName" : "SteelSeries Rival 3 Wireless",
+          "vendorID" : "0x1038",
+          "category" : "mouse"
+        }
+      },
+      "pointer" : {
+        "speed" : 0.0805,
+        "disableAcceleration" : false
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.9.5"
+}

@@ -1,0 +1,19 @@
+font-family = Monaspace Neon Light
+
+theme = Ayu Mirage
+
+# set cursor to block and disable blinking
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = false
+
+progress-style = false
+
+# hide title bar text
+title = " "
+macos-titlebar-proxy-icon = hidden
+
+# disable font ligatures
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig

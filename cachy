@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+
+if [[ -z $STOW_FOLDERS ]]; then
+    STOW_FOLDERS="ghostty,git,nvim,pacman,tmux,zsh"
+fi
+
+if [[ -z $DOTFILES ]]; then
+    DOTFILES=$HOME/.dotfiles
+fi
+
+# Run stow
+STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
+
+# Install pacman packages
+sudo pacman -S --needed - < pkglist.txt
