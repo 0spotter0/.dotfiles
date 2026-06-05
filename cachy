@@ -11,5 +11,6 @@ fi
 # Run stow
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 
-# Install pacman packages
-sudo pacman -S --needed - < pkglist.txt
+# Install packages
+sudo pacman -S --needed yay
+yay -S --needed - < ~/pkglist.txt
