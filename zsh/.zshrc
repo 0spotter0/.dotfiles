@@ -17,7 +17,7 @@ fi
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 [[ ! -d $ZSH_CACHE_DIR ]] && mkdir $ZSH_CACHE_DIR
 
-ZSH_THEME=""  # empty since p10k handles the prompt
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     git
@@ -36,6 +36,8 @@ ZSH_AUTOSUGGEST_HISTORY_IGNORE=*
 
 # p10k
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+setopt globdots
 
 unsetopt correct_all
 eval "$(fnm env --use-on-cd --shell zsh)"
