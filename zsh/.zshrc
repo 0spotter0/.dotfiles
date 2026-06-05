@@ -9,15 +9,15 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # OMZ setup
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export ZSH="$HOME/.oh-my-zsh"
-else
+if [[ -f /usr/share/cachyos-zsh-config/cachyos-config.zsh ]]; then
   export ZSH="/usr/share/oh-my-zsh"
+  ZSH_THEME=""
+else
+  export ZSH="$HOME/.oh-my-zsh"
+  ZSH_THEME="powerlevel10k/powerlevel10k"
 fi
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 [[ ! -d $ZSH_CACHE_DIR ]] && mkdir $ZSH_CACHE_DIR
-
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
     git
