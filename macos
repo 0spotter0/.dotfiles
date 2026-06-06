@@ -8,8 +8,26 @@ if [[ -z $DOTFILES ]]; then
     DOTFILES=$HOME/.dotfiles
 fi
 
+# Install Homebrew if not installed
+if command -v brew &>/dev/null; then
+    echo "Homebrew is already installed. Skipping."
+else
+    echo "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" </dev/null ## /dev/null skips pressing enter for the installation
+fi
+
+brew install stow
+
 # Run stow
 STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 
 # Install brew packages
 brew bundle check --global || brew bundle install --global
+
+# Install Oh My Zsh if not installed
+if [ -d "$HOME/.oh-my-zsh" ] || [ -L "$HOME/.oh-my-zsh" ]; then
+    echo "Oh My Zsh is already installed. Skipping."
+else
+    echo "Installing Oh My Zsh..."
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
