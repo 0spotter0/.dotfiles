@@ -14,3 +14,6 @@ STOW_FOLDERS=$STOW_FOLDERS DOTFILES=$DOTFILES $DOTFILES/install
 # Install packages
 sudo pacman -S --needed yay
 yay -S --needed - < ~/pkglist.txt
+
+# Link ~/.oh-my-zsh
+ln -s /usr/share/oh-my-zsh ~/.oh-my-zsh
