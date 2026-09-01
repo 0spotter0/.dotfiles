@@ -1,6 +1,6 @@
 font-family = Monaspace Neon Light
 
-theme = Ayu Mirage
+theme = Zenwritten Dark
 
 # set cursor to block and disable blinking
 shell-integration-features = no-cursor
